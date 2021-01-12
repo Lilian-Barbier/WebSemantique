@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:creation="http://www.univ-rouen.fr/ontologies/restaurant/creation">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte/">
+        <carte:répertorie>
+            <rdf:Bag>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-des-petits-rois"/>
+            </rdf:Bag>
+        </carte:répertorie>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats/moules-frites" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/plats"/>
+<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
+        <rdfs:label xml:lang="fr-FR">‘Moules frites’</rdfs:label>
+        <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
+            20
+        </carte:prixDeVenteTtc>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/pizza/plats/pizza-reine" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/plats"/>
+	<rdfs:label xml:lang="fr-FR">Pizza Reine</rdfs:label>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/sauce-tomate">
+	    <rdfs:label xml:lang="fr-FR">Sauce Tomate</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/champignons">
+	<rdfs:label xml:lang="fr-FR">Champignons</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/basilic">
+	    <rdfs:label xml:lang="fr-FR">Basilic</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/jambon">
+	    <rdfs:label xml:lang="fr-FR">Jambon</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/farine">
+	<rdfs:label xml:lang="fr-FR">Farine</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/sel">
+	    <rdfs:label xml:lang="fr-FR">Sel</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+	<recette:contient-l-ingredient> <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/oeuf">
+	    <rdfs:label xml:lang="fr-FR">Oeuf</rdfs:label>
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/ingredient"/>
+	</rdf:Description>
+	</recette:contient-l-ingredient>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/cafe-gourmand" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+        <rdfs:label xml:lang="fr-FR">Café ou thé gourmand</rdfs:label>
+        <rdfs:label xml:lang="en-US">Coffee or tea pastries</rdfs:label>
+        <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
+            10
+        </carte:prixDeVenteTtc>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
+<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+        <rdfs:label xml:lang="fr-FR">Fondant au chocolat, meringue et glace Vanille</rdfs:label>
+        <rdfs:label xml:lang="en-US">Chocolate fondant, and vanilla ice cream</rdfs:label>
+        <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
+            11
+        </carte:prixDeVenteTtc>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sabayon" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+        <rdfs:label xml:lang="fr-FR">Fruits frais de saison, sabayon au Champagne gratiné</rdfs:label>
+        <rdfs:label xml:lang="en-US">Seasonal fruits &amp; Champagne sabayon</rdfs:label>
+        <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
+            10
+        </carte:prixDeVenteTtc>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/tarte-tatin" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+       <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
+       <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+       <rdfs:label xml:lang="fr-FR">Tarte tatin, crème fraîche de Normandie’</rdfs:label>
+       <rdfs:label xml:lang="en-US">Apple Tart tatin Normandy creme fraiche</rdfs:label>
+       <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
+           10
+       </carte:prixDeVenteTtc>
+   </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/poisson" xmlns:menu="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu">
+	<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
+		<rdfs:label xml:lang="fr-FR">Menu Poisson</rdfs:label>
+		<menu:contient-la-recette>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées/gambas">
+		<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées"/>
+	    <rdfs:label xml:lang="fr-FR">Gambas</rdfs:label>
+	</rdf:Description>
+	</menu:contient-la-recette>
+	<menu:contient-la-recette>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats/filet-de-merlan">
+		<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
+	    <rdfs:label xml:lang="fr-FR">Filet de Merlan</rdfs:label>
+	</rdf:Description>
+	</menu:contient-la-recette>
+	<menu:contient-la-recette>
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sorbet-citron">
+		<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+	    <rdfs:label xml:lang="fr-FR">Sorbet Citron</rdfs:label>
+	</rdf:Description>
+	</menu:contient-la-recette>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant/menu-des-petits-rois" xmlns:menu="http://www.univ-rouen.fr/ontologies/restaurant/menu">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant"/>
+    </rdf:Description>
+    <rdf:Description
+rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant/menu-des-petits-rois">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
+    </rdf:Description>
+    <rdf:Statement rdf:about="#triplet1">
+        <rdf:subject rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat"/>
+        <rdf:predicate rdf:resource="rdfs:type"/>
+        <rdf:object rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+        <creation:cree-par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+            Chef
+        </creation:cree-par>
+        <creation:cree-le rdf:datatype="http://www.w3.org/2001/XMLSchema#date">
+            10/11/2018
+        </creation:cree-le>
+    </rdf:Statement>
+</rdf:RDF>
