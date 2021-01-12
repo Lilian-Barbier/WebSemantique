@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte/">
+        <carte:répertorie>
+            <rdf:Bag>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour"/>
+                <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-des-petits-rois"/>
+            </rdf:Bag>
+        </carte:répertorie>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant/menu-des-petits-rois" xmlns:menu="http://www.univ-rouen.fr/ontologies/restaurant/menu">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant"/>
+    </rdf:Description>
+    <rdf:Description
+rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant/menu-des-petits-rois">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
+
+    </rdf:Description>
+</rdf:RDF>
