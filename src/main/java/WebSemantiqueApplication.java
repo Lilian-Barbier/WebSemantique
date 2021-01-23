@@ -3,22 +3,14 @@ import org.apache.jena.riot.RDFDataMgr;
 
 import java.io.InputStream;
 
+@SuppressWarnings("*")
 public class WebSemantiqueApplication {
 
     public static void main(String[] args) {
         System.out.println("Program started");
-        String inputFileName = "src\\main\\resources\\menu.rdf";
 
-        Model model = ModelFactory.createDefaultModel();
 
-        // use the RDFDataMgr to find the input file
-        InputStream in = RDFDataMgr.open( inputFileName );
-        if (in == null) {
-            throw new IllegalArgumentException(
-                    "File: " + inputFileName + " not found");
-        }
-
-        model.read(in, null);
+        Model model = OntologyFactory.getOntology(OntologyFactory.ONTOLOGY);
         model.listObjects();
 
         System.out.println("----------------  Liste des sujets ---------------- ");
