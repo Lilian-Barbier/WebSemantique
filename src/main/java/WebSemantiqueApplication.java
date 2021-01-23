@@ -1,6 +1,8 @@
 import org.apache.commons.lang3.Validate;
 import org.apache.jena.ontology.OntModel;
 import org.apache.jena.rdf.model.*;
+import org.apache.jena.rdfconnection.RDFConnection;
+import org.apache.jena.rdfconnection.RDFConnectionFactory;
 import org.apache.jena.reasoner.ValidityReport;
 import org.apache.jena.riot.RDFDataMgr;
 
@@ -9,18 +11,29 @@ import java.io.InputStream;
 @SuppressWarnings("*")
 public class WebSemantiqueApplication {
 
+    public static boolean IS_LOCAL = false;
     public static void main(String[] args) {
-        System.out.println("Program started");
+        if (IS_LOCAL) {
+            System.out.println("---------------- Local ----------------");
 
-        Model ontology = OntologyFactory.getOntology(OntologyFactory.ONTOLOGY);
+            Model ontology = OntologyFactory.getOntology(OntologyFactory.ONTOLOGY);
 
-        OntModel schema = OntologyFactory.getSchema(OntologyFactory.SCHEMA);
+            OntModel schema = OntologyFactory.getSchema(OntologyFactory.SCHEMA);
 
-        ontology.listObjects();
-
-        OntologyDAO dao = new OntologyDAO();
-        System.out.println("Nombre de plats : " + dao.getPlatAmount());
-//        System.out.println("----------------  Liste des sujets ---------------- ");
+            OntologyDAO dao = new OntologyDAO();
+            System.out.println("Nombre de plats : " + dao.getPlatAmount());
+        } else {
+            System.out.println("---------------- Remote ----------------");
+            try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {
+                conn.querySelect("SELECT DISTINCT ?s { ?s ?p ?o }", (qs) ->
+                        System.out.println(qs)
+                );
+            } catch (Exception e) {
+                System.out.println("Une erreur a eu lieu avec la base distante.");
+                System.out.println(e);
+            }
+        }
+        //        System.out.println("----------------  Liste des sujets ---------------- ");
 //        ResIterator iteratorSubject = ontology.listSubjects();
 //        while (iteratorSubject.hasNext()) {
 //            Resource r = iteratorSubject.next();
