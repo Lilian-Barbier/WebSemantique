@@ -1,0 +1,1528 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.univ-rouen.fr/ontologies/restaurant"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.univ-rouen.fr/ontologies/restaurant"
+     versionIRI="http://www.univ-rouen.fr/ontologies/restaurant/1.0">
+    <Prefix name="" IRI="http://www.univ-rouen.fr/ontologies/restaurant"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="#createur"/>
+        <Literal>Lilian, Chris, Calice</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal>Ontologie de Menu Restaurant</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">1.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#Boisson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Commande"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dessert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entrée"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Famille-de-plat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fromage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gluten"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ingrédient"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Menu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Menu-enfant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recette"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restaurant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spécificités"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Viande"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#a_pour_spécificité"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commande_un_menu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#commande_une_recette"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient_la_recette"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient_le_menu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#est_préparée_par"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#menu_contient_recette"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#menu_possède_une_specificite"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#propose_la_carte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recette_achetée_par_commande"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#restaurant_prepare_commande"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_couté"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_couté_en_ht"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_couté_en_ttc"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_pour_numéro_de_commande"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_été_acheté_par"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#a_été_payé"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#est_acheté_le"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#est_disponible_en_quantite"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#est_localisé_au"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#est_une_carte_de_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prix_de_vente_ttc_menu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#prix_vente_ht_menu"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sera_vendu_ht"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sera_vendu_ttc"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="#createur"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Boisson"/>
+        <Class IRI="#Famille-de-plat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Boisson"/>
+        <Class IRI="#Recette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Famille-de-plat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Recette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entrée"/>
+        <Class IRI="#Famille-de-plat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Entrée"/>
+        <Class IRI="#Recette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fromage"/>
+        <Class IRI="#Famille-de-plat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fromage"/>
+        <Class IRI="#Recette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gluten"/>
+        <Class IRI="#Spécificités"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Menu-enfant"/>
+        <Class IRI="#Menu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plat"/>
+        <Class IRI="#Famille-de-plat"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plat"/>
+        <Class IRI="#Recette"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegan"/>
+        <Class IRI="#Spécificités"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Viande"/>
+        <Class IRI="#Spécificités"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Boisson"/>
+        <Class IRI="#Dessert"/>
+        <Class IRI="#Entrée"/>
+        <Class IRI="#Fromage"/>
+        <Class IRI="#Plat"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Vegan"/>
+        <Class IRI="#Viande"/>
+    </DisjointClasses>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#a_pour_spécificité"/>
+        <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+        <ObjectProperty IRI="#propose_la_carte"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#commande_un_menu"/>
+        <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#commande_une_recette"/>
+        <ObjectProperty IRI="#recette_achetée_par_commande"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+        <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contient_la_recette"/>
+        <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#contient_le_menu"/>
+        <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#est_préparée_par"/>
+        <ObjectProperty IRI="#restaurant_prepare_commande"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+        <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+        <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#menu_contient_recette"/>
+        <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#menu_possède_une_specificite"/>
+        <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+    </InverseObjectProperties>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#est_préparée_par"/>
+    </InverseFunctionalObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+    </TransitiveObjectProperty>
+    <TransitiveObjectProperty>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+    </TransitiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#a_pour_spécificité"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commande_un_menu"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#commande_une_recette"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contient_la_recette"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contient_le_menu"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#est_préparée_par"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+        <Class IRI="#Famille-de-plat"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+        <Class IRI="#Ingrédient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+        <Class IRI="#Ingrédient"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#menu_contient_recette"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#menu_possède_une_specificite"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#propose_la_carte"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recette_achetée_par_commande"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#restaurant_prepare_commande"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#a_pour_spécificité"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#a_pour_spécificité"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#a_pour_spécificité"/>
+            <Class IRI="#Spécificités"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#carte_proposée_par_le_restaurant"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commande_un_menu"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commande_un_menu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#commande_un_menu"/>
+            <Class IRI="#Menu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commande_une_recette"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#commande_une_recette"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#commande_une_recette"/>
+            <Class IRI="#Recette"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+        <Class IRI="#Famille-de-plat"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contient_des_familles_de_plat"/>
+            <Class IRI="#Famille-de-plat"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_la_recette"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_la_recette"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contient_la_recette"/>
+            <Class IRI="#Recette"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_le_menu"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_le_menu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#contient_le_menu"/>
+            <Class IRI="#Menu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#est_préparée_par"/>
+        <Class IRI="#Restaurant"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#est_préparée_par"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#est_préparée_par"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#famille_de_plats_est_contenue_dans_la_carte"/>
+            <Class IRI="#Carte"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ingredient_possede_une_specificite"/>
+            <Class IRI="#Spécificités"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ingrédient_est_contenu_dans_recette"/>
+            <Class IRI="#Recette"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#menu_acheté_dans_commande"/>
+            <Class IRI="#Commande"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_contient_recette"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_contient_recette"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#menu_contient_recette"/>
+            <Class IRI="#Recette"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#menu_est_contenu_dans_carte"/>
+            <Class IRI="#Carte"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_possède_une_specificite"/>
+        <Class IRI="#Spécificités"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#menu_possède_une_specificite"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#menu_possède_une_specificite"/>
+            <Class IRI="#Spécificités"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propose_la_carte"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#propose_la_carte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#propose_la_carte"/>
+            <Class IRI="#Restaurant"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_achetée_par_commande"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_achetée_par_commande"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#recette_achetée_par_commande"/>
+            <Class IRI="#Commande"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#recette_contenue_dans_menu"/>
+            <Class IRI="#Menu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#recette_est_contenu_dans_carte"/>
+            <Class IRI="#Carte"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_prepare_commande"/>
+        <Class IRI="#Commande"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_prepare_commande"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#restaurant_prepare_commande"/>
+            <Class IRI="#Commande"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_menu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#restaurant_propose_menu"/>
+            <Class IRI="#Menu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+        <Class IRI="#Carte"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#restaurant_propose_recettes"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#restaurant_propose_recettes"/>
+            <Class IRI="#Recette"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+        <Class IRI="#Recette"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#specificite_possédée_par_recette"/>
+            <Class IRI="#Recette"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+        <Class IRI="#Ingrédient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#specificité_possédée_par_ingrédient"/>
+            <Class IRI="#Ingrédient"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+        <Class IRI="#Menu"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#spécificité_possédée_par_menu"/>
+            <Class IRI="#Menu"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+        <Class IRI="#Ingrédient"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#contient_l&apos;ingrédient"/>
+            <Class IRI="#Ingrédient"/>
+        </ObjectMinCardinality>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté"/>
+        <Class IRI="#Ingrédient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_couté"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté_en_ht"/>
+        <Class IRI="#Commande"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté_en_ht"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_couté_en_ht"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté_en_ttc"/>
+        <Class IRI="#Commande"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_couté_en_ttc"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_couté_en_ttc"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_pour_numéro_de_commande"/>
+        <Class IRI="#Commande"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_pour_numéro_de_commande"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_pour_numéro_de_commande"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_été_acheté_par"/>
+        <Class IRI="#Commande"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_été_acheté_par"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_été_acheté_par"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_été_payé"/>
+        <Class IRI="#Recette"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#a_été_payé"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#a_été_payé"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_acheté_le"/>
+        <Class IRI="#Commande"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_acheté_le"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#est_acheté_le"/>
+            <Datatype abbreviatedIRI="xsd:dateTime"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_disponible_en_quantite"/>
+        <Class IRI="#Ingrédient"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_localisé_au"/>
+        <Class IRI="#Restaurant"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_une_carte_de_type"/>
+        <Class IRI="#Carte"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#est_une_carte_de_type"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#est_une_carte_de_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prix_de_vente_ttc_menu"/>
+        <Class IRI="#Menu"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prix_de_vente_ttc_menu"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#prix_de_vente_ttc_menu"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prix_vente_ht_menu"/>
+        <Class IRI="#Menu"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#prix_vente_ht_menu"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#prix_vente_ht_menu"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sera_vendu_ht"/>
+        <Class IRI="#Recette"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sera_vendu_ht"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#sera_vendu_ht"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sera_vendu_ttc"/>
+        <Class IRI="#Recette"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sera_vendu_ttc"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#sera_vendu_ttc"/>
+            <Datatype abbreviatedIRI="xsd:float"/>
+        </DataExactCardinality>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_couté"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_couté_en_ht"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_couté_en_ttc"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_pour_numéro_de_commande"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_été_acheté_par"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#a_été_payé"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#est_acheté_le"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#est_disponible_en_quantite"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#est_localisé_au"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#est_une_carte_de_type"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#prix_de_vente_ttc_menu"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#prix_vente_ht_menu"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sera_vendu_ht"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sera_vendu_ttc"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Boisson</IRI>
+        <Literal xml:lang="fr">Boisson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Boisson</IRI>
+        <Literal xml:lang="en">Drink</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Carte</IRI>
+        <Literal xml:lang="fr">Classe regroupant les propositions du restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Carte</IRI>
+        <Literal xml:lang="fr">Carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Commande</IRI>
+        <Literal xml:lang="fr">Classe définissant l&apos;achat de recettes ou menus proposés par le restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Commande</IRI>
+        <Literal xml:lang="fr">Commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dessert</IRI>
+        <Literal xml:lang="en">Dessert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Dessert</IRI>
+        <Literal xml:lang="fr">Dessert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Entrée</IRI>
+        <Literal xml:lang="fr">Entrée</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Entrée</IRI>
+        <Literal xml:lang="en">Straters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Famille-de-plat</IRI>
+        <Literal xml:lang="fr">Super classe regroupe les types de recettes qu&apos;un restaurant peut fournir</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Famille-de-plat</IRI>
+        <Literal xml:lang="fr">Famille de plat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fromage</IRI>
+        <Literal xml:lang="fr">Classe qui définit tous les fromages</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fromage</IRI>
+        <Literal xml:lang="en">Cheese</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fromage</IRI>
+        <Literal xml:lang="fr">Fromage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Gluten</IRI>
+        <Literal xml:lang="en">Classe regroupant les produits qui contiennent du Gluten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Gluten</IRI>
+        <Literal xml:lang="en">Gluten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Gluten</IRI>
+        <Literal xml:lang="fr">Gluten</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Ingrédient</IRI>
+        <Literal xml:lang="fr">Classe définissant tout type d&apos;ingrédients/produit d&apos;une recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Ingrédient</IRI>
+        <Literal xml:lang="fr">Ingrédient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Menu</IRI>
+        <Literal xml:lang="fr">Classe regroupant les ensembles de recette proposées ensembles par un restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Menu</IRI>
+        <Literal xml:lang="fr">Menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Menu-enfant</IRI>
+        <Literal xml:lang="fr">Classe représentant un menu enfant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Menu-enfant</IRI>
+        <Literal xml:lang="fr">Menu enfant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Plat</IRI>
+        <Literal xml:lang="en">Dish</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Plat</IRI>
+        <Literal xml:lang="fr">Plat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Recette</IRI>
+        <Literal xml:lang="fr">Ensemble d&apos;ingrédients
+Classe représentant la composition d&apos;un plat (dans le sens &quot;quelque chose que l&apos;on mange&quot;)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Recette</IRI>
+        <Literal xml:lang="fr">Recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Restaurant</IRI>
+        <Literal xml:lang="fr">Classe définissant le restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Restaurant</IRI>
+        <Literal xml:lang="fr">Restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Spécificités</IRI>
+        <Literal xml:lang="fr">Classe regroupant les spécificités d&apos;un ingrédient/recette/menu. Par exemple les allergènes ou les régimes alimentaires</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Spécificités</IRI>
+        <Literal xml:lang="fr">Spécificités</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vegan</IRI>
+        <Literal xml:lang="fr">Classe regroupant les produits ne contenant pas les produits d&apos;originine animale</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vegan</IRI>
+        <Literal xml:lang="en">Vegan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vegan</IRI>
+        <Literal xml:lang="fr">Vegan</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Viande</IRI>
+        <Literal xml:lang="en">Classe regroupant les produits contenant de la viande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Viande</IRI>
+        <Literal xml:lang="en">Meat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Viande</IRI>
+        <Literal xml:lang="fr">Viande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_couté</IRI>
+        <Literal xml:lang="fr">Coût d&apos;achat d&apos;un Ingrédient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_couté</IRI>
+        <Literal xml:lang="fr">coût d&apos;achat ingredient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_couté_en_ht</IRI>
+        <Literal xml:lang="fr">Prix de vente Hors Taxe de la Commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_couté_en_ht</IRI>
+        <Literal xml:lang="fr">prix de vente ht commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_couté_en_ttc</IRI>
+        <Literal xml:lang="fr">Prix de Vente Toute taxe comprise de la Commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_couté_en_ttc</IRI>
+        <Literal xml:lang="fr">prix de vente ttc commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_pour_numéro_de_commande</IRI>
+        <Literal>Numéro de commande unique</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_pour_numéro_de_commande</IRI>
+        <Literal xml:lang="fr">numero commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_pour_spécificité</IRI>
+        <Literal>Une recette peut contenir des spécificités</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_pour_spécificité</IRI>
+        <Literal>recette possède specificites</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_été_acheté_par</IRI>
+        <Literal xml:lang="fr">Client de la commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_été_acheté_par</IRI>
+        <Literal xml:lang="fr">client commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#a_été_payé</IRI>
+        <Literal xml:lang="fr">Coût d&apos;achat de la recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#a_été_payé</IRI>
+        <Literal xml:lang="fr">coût d&apos;achat recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#carte_proposée_par_le_restaurant</IRI>
+        <Literal>Une carte est proposée par un restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#carte_proposée_par_le_restaurant</IRI>
+        <Literal>carte proposée par restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#commande_un_menu</IRI>
+        <Literal>Une commande commande un menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#commande_un_menu</IRI>
+        <Literal>commande un menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#commande_une_recette</IRI>
+        <Literal>Une commande commande des recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#commande_une_recette</IRI>
+        <Literal>commande une recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contient_des_familles_de_plat</IRI>
+        <Literal>Une carte contient des familles de plats</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contient_des_familles_de_plat</IRI>
+        <Literal>carte contient familles de plat</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contient_la_recette</IRI>
+        <Literal>Une carte peut contenir plusieurs recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contient_la_recette</IRI>
+        <Literal>carte contient recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contient_le_menu</IRI>
+        <Literal>Une carte peut contenir plusieurs menus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contient_le_menu</IRI>
+        <Literal>carte contient menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#est_acheté_le</IRI>
+        <Literal xml:lang="fr">Date à laquelle la commande est passée</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#est_acheté_le</IRI>
+        <Literal xml:lang="fr">date d&apos;achat commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#est_disponible_en_quantite</IRI>
+        <Literal xml:lang="fr">Quantité de stock disponible de l&apos;ingrédient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#est_disponible_en_quantite</IRI>
+        <Literal xml:lang="fr">quantité stock ingrédient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#est_localisé_au</IRI>
+        <Literal xml:lang="fr">Adresse des locaux du restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#est_localisé_au</IRI>
+        <Literal xml:lang="fr">adresse restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#est_préparée_par</IRI>
+        <Literal>Une commande est préparée par un seul restaurant et un restaurant prépare une commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#est_préparée_par</IRI>
+        <Literal>est preparee par le restaurant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#est_une_carte_de_type</IRI>
+        <Literal xml:lang="fr">Carte du midi oui carte du soir. Les deux cartes peuvent être les mêmes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#est_une_carte_de_type</IRI>
+        <Literal xml:lang="fr">type de carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#famille_de_plats_est_contenue_dans_la_carte</IRI>
+        <Literal>Une famille de plats peut être contenue dans plusieurs cartes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#famille_de_plats_est_contenue_dans_la_carte</IRI>
+        <Literal>famille de plats contenues dans carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingredient_possede_une_specificite</IRI>
+        <Literal>Un ingrédient peut posséder des spécificités</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ingredient_possede_une_specificite</IRI>
+        <Literal>ingredient possede specificites</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ingrédient_est_contenu_dans_recette</IRI>
+        <Literal>Un ingrédient peut être contenu dans plusieurs recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ingrédient_est_contenu_dans_recette</IRI>
+        <Literal>ingrédient contenu dans recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_acheté_dans_commande</IRI>
+        <Literal>Un menu peut être acheté par plusieurs commandes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_acheté_dans_commande</IRI>
+        <Literal>menu acheté dans commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#menu_contient_recette</IRI>
+        <Literal>Un menu contient plusieurs recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_contient_recette</IRI>
+        <Literal>menu contient recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_est_contenu_dans_carte</IRI>
+        <Literal>Un menu peut être contenu dans plusieurs cartes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_est_contenu_dans_carte</IRI>
+        <Literal>menu contenu dans carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#menu_possède_une_specificite</IRI>
+        <Literal>Un menu peut contenir des spécificités</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#menu_possède_une_specificite</IRI>
+        <Literal>menu possede specifications</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#prix_de_vente_ttc_menu</IRI>
+        <Literal xml:lang="fr">Prix de vente toute taxe comprise du menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#prix_de_vente_ttc_menu</IRI>
+        <Literal xml:lang="fr">prix de vente ttc menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#prix_vente_ht_menu</IRI>
+        <Literal xml:lang="fr">Prix de vente hors taxe du menu.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#prix_vente_ht_menu</IRI>
+        <Literal xml:lang="fr">prix de vente ht menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#propose_la_carte</IRI>
+        <Literal>Un restaurant peut proposer une carte du midi et une carte du soir ou des cartes pour des occasions spéciales</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#propose_la_carte</IRI>
+        <Literal>restaurant propose la carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recette_achetée_par_commande</IRI>
+        <Literal>Une recette peut être achetée par plusieurs commandes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recette_achetée_par_commande</IRI>
+        <Literal>recette achetée par commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recette_contenue_dans_menu</IRI>
+        <Literal>Une recette peut être contenue dans plusieurs menus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recette_contenue_dans_menu</IRI>
+        <Literal>recette contenue dans menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#recette_est_contenu_dans_carte</IRI>
+        <Literal>Une recettes peut être contenue dans plusieurs carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#recette_est_contenu_dans_carte</IRI>
+        <Literal>recette contenue dans carte</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#restaurant_prepare_commande</IRI>
+        <Literal>Un restaurant prépare des commandes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#restaurant_prepare_commande</IRI>
+        <Literal>restaurant prepare commande</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#restaurant_propose_menu</IRI>
+        <Literal>Un restaurant propose plusieurs menus</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#restaurant_propose_menu</IRI>
+        <Literal>restaurant propose menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#restaurant_propose_recettes</IRI>
+        <Literal>Un restaurant propose des recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#restaurant_propose_recettes</IRI>
+        <Literal>restaurant propose recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sera_vendu_ht</IRI>
+        <Literal xml:lang="fr">Prix de vente hors taxe de la recette.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sera_vendu_ht</IRI>
+        <Literal xml:lang="fr">prix de vente ht recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sera_vendu_ttc</IRI>
+        <Literal xml:lang="fr">Prix de vente toute taxe comprise de la recette. Supérieure ou égale à prix de vente ht recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sera_vendu_ttc</IRI>
+        <Literal xml:lang="fr">prix de vente ttc recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#specificite_possédée_par_recette</IRI>
+        <Literal>Une spécificité peut être possédée par plusieurs recettes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#specificite_possédée_par_recette</IRI>
+        <Literal>specificité possédée par recette</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#specificité_possédée_par_ingrédient</IRI>
+        <Literal>Une spécificité peut être possédée par plusieurs ingrédients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#specificité_possédée_par_ingrédient</IRI>
+        <Literal>spécificité possédé par ingrédient</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#spécificité_possédée_par_menu</IRI>
+        <Literal>Une spécificité peut être possédée par un menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spécificité_possédée_par_menu</IRI>
+        <Literal>spécificité possédée par menu</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#contient_l&apos;ingrédient</IRI>
+        <Literal>Une recette contient 1 ou plusieurs ingrédients</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#contient_l&apos;ingrédient</IRI>
+        <Literal>recette contient ingrédient</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
