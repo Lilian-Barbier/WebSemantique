@@ -28,6 +28,8 @@ public class WebSemantiqueApplication {
             dao.updatePrice(35,"Fondant au chocolat, meringue et glace Vanille");
             System.out.println("--------------Liste des plats végétariens :");
             dao.getAllVegetarianPlat();
+            System.out.println("--------------Liste des plats d'un restaurant particulier :");
+            dao.getAllPlatOf("La Brasserie des 2 rois");
         } else {
             System.out.println("---------------- Remote ----------------");
             try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {

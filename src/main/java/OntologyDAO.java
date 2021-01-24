@@ -189,4 +189,46 @@ public class OntologyDAO {
         }
         return;
     }
+
+    public void getAllPlatOf(String label) {
+        Model ontology = OntologyFactory.getOntology(OntologyFactory.ONTOLOGY);
+        String sQuery =
+                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+                        "prefix menu: <http://www.univ-rouen.fr/ontologies/restaurant/carte/menu> " +
+                        "prefix restaurant: <http://www.univ-rouen.fr/ontologies/restaurant> " +
+                        "prefix carte: <http://www.univ-rouen.fr/ontologies/restaurant/carte> " +
+                        "SELECT ?label " +
+                        "WHERE { VALUES ?famille { " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/boissons> " +
+                        "} " +
+                        "?restaurant rdf:type <http://www.univ-rouen.fr/ontologies/restaurant>. " +
+                        "?restaurant rdfs:label '" + label +"'. " +
+                        "?restaurant restaurant:propose ?carte. " +
+                        "?carte carte:contient ?plat. " +
+                        "?plat rdf:type ?famille. " +
+                        "?plat rdfs:label ?label " +
+                        "FILTER(LANGMATCHES(LANG(?label), \"fr\")) " +
+                        "} ";
+        System.out.println(sQuery);
+        Query query = QueryFactory.create(sQuery);
+        QueryExecution qexec = QueryExecutionFactory.create(query, ontology);
+        try {
+            ResultSet rs = qexec.execSelect();
+            while (rs.hasNext()) {
+
+                QuerySolution solution = rs.next();
+                String label_result = solution.getLiteral("label").getString();
+                System.out.println(label_result);
+
+            }
+        } finally {
+            qexec.close();
+        }
+        return;
+    }
 }

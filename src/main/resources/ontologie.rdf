@@ -1,6 +1,13 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:creation="http://www.univ-rouen.fr/ontologies/restaurant/creation">
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte/">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/la-brasserie-des-deux-rois" xmlns:restaurant="http://www.univ-rouen.fr/ontologies/restaurant">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant"/>
+        <rdfs:label>La Brasserie des 2 rois</rdfs:label>
+        <restaurant:adresse>15 Place de la Pucelle 76000 Rouen</restaurant:adresse>
+        <restaurant:propose rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/carte-brasserie-des-deux-rois"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/carte-brasserie-des-deux-rois" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte/">
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte"/>
         <carte:répertorie>
             <rdf:Bag>
                 <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées"/>
@@ -11,6 +18,18 @@
                 <rdf:li rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-des-petits-rois"/>
             </rdf:Bag>
         </carte:répertorie>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/pizza/plats/pizza-reine"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats/moules-frites"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/cafe-gourmand"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sabayon"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/tarte-tatin"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/poisson"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées/gambas"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats/filet-de-merlan"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sorbet-citron"/>
+        <carte:contient rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-enfant/menu-des-petits-rois"/>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
