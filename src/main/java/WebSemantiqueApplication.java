@@ -21,10 +21,13 @@ public class WebSemantiqueApplication {
             OntModel schema = OntologyFactory.getSchema(OntologyFactory.SCHEMA);
 
             OntologyDAO dao = new OntologyDAO();
-            System.out.println("Nombre de plats : " + dao.getPlatAmount());
-            System.out.println("Liste des plats :");
+            System.out.println("--------------Nombre de plats : " + dao.getPlatAmount());
+            System.out.println("--------------Liste des plats :");
             dao.getAllPlat();
+            System.out.println("--------------Mise à jour du prix :");
             dao.updatePrice(35,"Fondant au chocolat, meringue et glace Vanille");
+            System.out.println("--------------Liste des plats végétariens :");
+            dao.getAllVegetarianPlat();
         } else {
             System.out.println("---------------- Remote ----------------");
             try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {
