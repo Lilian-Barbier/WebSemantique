@@ -198,21 +198,22 @@ public class OntologyDAO {
                         "prefix menu: <http://www.univ-rouen.fr/ontologies/restaurant/carte/menu> " +
                         "prefix restaurant: <http://www.univ-rouen.fr/ontologies/restaurant> " +
                         "prefix carte: <http://www.univ-rouen.fr/ontologies/restaurant/carte> " +
-                        "SELECT ?label " +
-                        "WHERE { VALUES ?famille { " +
-                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats> " +
-                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts> " +
-                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées> " +
-                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages> " +
-                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/boissons> " +
-                        "} " +
+                        "SELECT ?adresse " +
+                        "WHERE { " +
+//                        "VALUES ?famille { " +
+//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats> " +
+//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts> " +
+//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées> " +
+//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages> " +
+//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/boissons> " +
+//                        "} " +
                         "?restaurant rdf:type <http://www.univ-rouen.fr/ontologies/restaurant>. " +
-                        "?restaurant rdfs:label '" + label +"'. " +
-                        "?restaurant restaurant:propose ?carte. " +
-                        "?carte carte:contient ?plat. " +
-                        "?plat rdf:type ?famille. " +
-                        "?plat rdfs:label ?label " +
-                        "FILTER(LANGMATCHES(LANG(?label), \"fr\")) " +
+                        "?restaurant rdfs:label \"" + label +"\". " +
+//                        "?restaurant restaurant:propose ?carte. " +
+//                        "?carte carte:contient ?plat. " +
+//                        "?plat rdf:type ?famille. " +
+//                        "?plat rdfs:label ?label " +
+//                        "FILTER(LANGMATCHES(LANG(?label), \"fr\")) " +
                         "} ";
         System.out.println(sQuery);
         Query query = QueryFactory.create(sQuery);
