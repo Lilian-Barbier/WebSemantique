@@ -11,7 +11,7 @@ import java.io.InputStream;
 @SuppressWarnings("*")
 public class WebSemantiqueApplication {
 
-    public static boolean IS_LOCAL = false;
+    public static boolean IS_LOCAL = true;
     public static void main(String[] args) {
         if (IS_LOCAL) {
             System.out.println("---------------- Local ----------------");
@@ -22,6 +22,8 @@ public class WebSemantiqueApplication {
 
             OntologyDAO dao = new OntologyDAO();
             System.out.println("Nombre de plats : " + dao.getPlatAmount());
+            System.out.println("Liste des plats :");
+            dao.getAllPlat();
         } else {
             System.out.println("---------------- Remote ----------------");
             try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {

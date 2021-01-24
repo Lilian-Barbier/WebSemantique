@@ -23,13 +23,14 @@
     <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats/moules-frites" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/plats"/>
 <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
-        <rdfs:label xml:lang="fr-FR">‘Moules frites’</rdfs:label>
+        <rdfs:label xml:lang="fr-FR">Moules frites</rdfs:label>
         <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
             20
         </carte:prixDeVenteTtc>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/pizza/plats/pizza-reine" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/plats"/>
+        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats"/>
 	<rdfs:label xml:lang="fr-FR">Pizza Reine</rdfs:label>
 	<recette:contient-l-ingredient>
 	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/ingredient/sauce-tomate">
