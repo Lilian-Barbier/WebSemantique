@@ -24,6 +24,7 @@ public class WebSemantiqueApplication {
             System.out.println("Nombre de plats : " + dao.getPlatAmount());
             System.out.println("Liste des plats :");
             dao.getAllPlat();
+            dao.updatePrice(35,"Fondant au chocolat, meringue et glace Vanille");
         } else {
             System.out.println("---------------- Remote ----------------");
             try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {

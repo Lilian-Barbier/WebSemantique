@@ -1,5 +1,8 @@
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
+import org.apache.jena.update.UpdateAction;
+import org.apache.jena.update.UpdateFactory;
+import org.apache.jena.update.UpdateRequest;
 
 public class OntologyDAO {
 
@@ -71,6 +74,33 @@ public class OntologyDAO {
         } finally {
             qexec.close();
         }
+        return;
+    }
+
+    public void updatePrice(int price, String label) {
+        Model ontology = OntologyFactory.getOntology(OntologyFactory.ONTOLOGY);
+        String sQuery =
+                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
+                        "PREFIX foaf:  <http://xmlns.com/foaf/0.1/>" +
+                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
+                        "prefix carte: <http://www.univ-rouen.fr/ontologies/restaurant/carte> " +
+                        "DELETE { ?plat  carte:prixDeVenteTtc ?prix } " +
+                        "INSERT { ?plat carte:prixDeVenteTtc '" + price + "' } " +
+                        "WHERE { VALUES ?famille { " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/plats> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/entrées> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/fromages> " +
+                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/boissons> " +
+                        "} " +
+                        "?plat rdf:type ?famille. " +
+                        "?plat rdfs:label '" + label + "' " +
+                        "FILTER(LANGMATCHES(LANG(?label), \"fr\")) " +
+                        "} ";
+            System.out.println(sQuery);
+            UpdateRequest request = UpdateFactory.create(sQuery);
+
+            UpdateAction.execute(request, ontology);
         return;
     }
 }
