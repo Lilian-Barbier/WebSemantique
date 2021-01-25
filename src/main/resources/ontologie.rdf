@@ -6,7 +6,7 @@
         <restaurant:adresse>15 Place de la Pucelle 76000 Rouen</restaurant:adresse>
         <restaurant:propose rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/carte-brasserie-des-deux-rois"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/carte-brasserie-des-deux-rois" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte/">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/carte-brasserie-des-deux-rois" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte"/>
         <carte:répertorie>
             <rdf:Bag>

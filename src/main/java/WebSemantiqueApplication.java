@@ -11,8 +11,12 @@ import java.io.InputStream;
 @SuppressWarnings("*")
 public class WebSemantiqueApplication {
 
-    public static boolean IS_LOCAL = true;
+    public static boolean IS_LOCAL = false;
+    public static String JENA_URL = "http://localhost:3030/";
+    public static String DATASET_NAME = "tpwebsem";
+
     public static void main(String[] args) {
+        OntologyDAO dao = new OntologyDAO();
         if (IS_LOCAL) {
             System.out.println("---------------- Local ----------------");
 
@@ -20,22 +24,20 @@ public class WebSemantiqueApplication {
 
             OntModel schema = OntologyFactory.getSchema(OntologyFactory.SCHEMA);
 
-            OntologyDAO dao = new OntologyDAO();
-            System.out.println("--------------Nombre de plats : " + dao.getPlatAmount());
+            System.out.println("--------------Nombre de plats : " + dao.getPlatAmount(null));
             System.out.println("--------------Liste des plats :");
-            dao.getAllPlat();
+            dao.getAllPlat(null);
             System.out.println("--------------Mise à jour du prix :");
             dao.updatePrice(35,"Fondant au chocolat, meringue et glace Vanille");
             System.out.println("--------------Liste des plats végétariens :");
-            dao.getAllVegetarianPlat();
+            dao.getAllVegetarianPlat(null);
             System.out.println("--------------Liste des plats d'un restaurant particulier :");
-            dao.getAllPlatOf("La Brasserie des 2 rois");
+            dao.getAllPlatOf("La Brasserie des 2 rois", null);
         } else {
             System.out.println("---------------- Remote ----------------");
-            try (RDFConnection conn = RDFConnectionFactory.connect("http://localhost:3030/tpwebsem")) {
-                conn.querySelect("SELECT DISTINCT ?s { ?s ?p ?o }", (qs) ->
-                        System.out.println(qs)
-                );
+            try (RDFConnection conn = RDFConnectionFactory.connect(JENA_URL + DATASET_NAME)) {
+                System.out.println(dao.getPlatAmount(conn));
+
             } catch (Exception e) {
                 System.out.println("Une erreur a eu lieu avec la base distante.");
                 System.out.println(e);
