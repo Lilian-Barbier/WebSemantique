@@ -116,7 +116,7 @@ public class OntologyDAO {
 
         UpdateAction.execute(request, ontology);
 
-
+//--------TEST----------------------------------------------------------------------------------------------------------
 //        String sQuery2 =
 //                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
 //                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
@@ -151,23 +151,6 @@ public class OntologyDAO {
     }
 
     public List<String> getAllVegetarianPlat(RDFConnection conn) {
-//        String sQuery =
-//                "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
-//                        "PREFIX foaf:  <http://xmlns.com/foaf/0.1/>" +
-//                        "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
-//                        "prefix recette: <http://www.univ-rouen.fr/ontologies/restaurant/carte/recette> " +
-//
-//        "INSERT DATA { " +
-//    "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat> recette:a-la-specificite <http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan>. " +
-//    "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/tarte-tatin> recette:a-la-specificite <http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan>. " +
-//    "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/cafe-gourmand> recette:a-la-specificite <http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan>. " +
-//    "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sabayon> recette:a-la-specificite <http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan>. " +
-//                        "<http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sorbet-citron> recette:a-la-specificite <http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan> " +
-//                        "}";
-//
-//        UpdateRequest request = UpdateFactory.create(sQuery);
-//
-//        UpdateAction.execute(request, ontology);
         String sQuery =
                 "prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
                         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +

@@ -11,7 +11,7 @@ import java.io.InputStream;
 @SuppressWarnings("*")
 public class WebSemantiqueApplication {
 
-    public static boolean IS_LOCAL = false;
+    public static boolean IS_LOCAL = true;
     public static String JENA_URL = "http://localhost:3030/";
     public static String DATASET_NAME = "tpwebsem";
 
@@ -24,64 +24,44 @@ public class WebSemantiqueApplication {
 
             OntModel schema = OntologyFactory.getSchema(OntologyFactory.SCHEMA);
 
-            System.out.println("--------------Nombre de plats : " + dao.getPlatAmount(null));
-            System.out.println("--------------Liste des plats :");
-            dao.getAllPlat(null);
-            System.out.println("--------------Mise à jour du prix :");
+            System.out.println("-----Nombre de plats : " + dao.getPlatAmount(null));
+            System.out.println("-----Liste des plats :");
+            for (String s : dao.getAllPlat(null)) {
+                System.out.println("- " + s);
+            }
+            System.out.println("-----Mise à jour du prix :");
             dao.updatePrice(35,"Fondant au chocolat, meringue et glace Vanille");
-            System.out.println("--------------Liste des plats végétariens :");
-            dao.getAllVegetarianPlat(null);
-            System.out.println("--------------Liste des plats d'un restaurant particulier :");
-            dao.getAllPlatOf("La Brasserie des 2 rois", null);
+            System.out.println("-----Liste des plats végétariens :");
+            for (String s : dao.getAllVegetarianPlat(null)) {
+                System.out.println("- " + s);
+            }
+            System.out.println("-----Liste des plats d'un restaurant particulier :");
+            for (String s : dao.getAllPlatOf("La Brasserie des 2 rois",null)) {
+                System.out.println("- " + s);
+            }
         } else {
             System.out.println("---------------- Remote ----------------");
             try (RDFConnection conn = RDFConnectionFactory.connect(JENA_URL + DATASET_NAME)) {
-                System.out.println(dao.getPlatAmount(conn));
+                System.out.println("-----Nombre de plats : "  + dao.getPlatAmount(conn));
+                System.out.println("-----Liste des plats :");
+                for (String s : dao.getAllPlat(conn)) {
+                    System.out.println("- " + s);
+                }
+                System.out.println("-----Liste des plats végétariens :");
+                for (String s : dao.getAllVegetarianPlat(conn)) {
+                    System.out.println("- " + s);
+                }
+                System.out.println("-----Liste des plats d'un restaurant particulier :");
+                for (String s : dao.getAllPlatOf("La Brasserie des 2 rois",conn)) {
+                    System.out.println("- " + s);
+                }
 
             } catch (Exception e) {
                 System.out.println("Une erreur a eu lieu avec la base distante.");
                 System.out.println(e);
             }
-        }
-        //        System.out.println("----------------  Liste des sujets ---------------- ");
-//        ResIterator iteratorSubject = ontology.listSubjects();
-//        while (iteratorSubject.hasNext()) {
-//            Resource r = iteratorSubject.next();
-//            System.out.println(r.getURI());
-//        }
-//
-//        System.out.println("---------------- Listes des prédicats ---------------- ");
-//        StmtIterator iteratorStmt = ontology.listStatements();
-//        while (iteratorStmt.hasNext()) {
-//            Statement r = iteratorStmt.next();
-//            System.out.println(r.getSubject().toString());
-//            System.out.println(r.getPredicate().toString());
-//            System.out.println(r.getObject().toString());
-//            System.out.println();
-//        }
-//        System.out.println("---------------- Listes des objets ---------------- ");
-//        NodeIterator iteratorObject = ontology.listObjects();
-//        while (iteratorObject.hasNext()) {
-//            RDFNode r = iteratorObject.next();
-//            System.out.println(r.toString());
-//        }
 
-//        System.out.println("---------------- tous ---------------- ");
-//
-//        StmtIterator it = ontology.listStatements(
-//                new SimpleSelector(ontology.createResource("http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"),
-//                        ontology.createProperty("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"), (RDFNode) null) {
-//                    public boolean selects(Statement s){
-//                        return true;
-//                    }
-//                });
-//        while (it.hasNext()) {
-//            Statement s = it.next();
-//            Statement r = it.next();
-//            System.out.println(r.getObject().toString());
-//            System.out.println();
-//        }
-//        System.out.println("Program ended");
+        }
     }
 
 

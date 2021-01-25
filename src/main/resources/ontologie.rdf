@@ -101,7 +101,7 @@
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette"/>
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plats"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/cafe-gourmand" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/cafe-gourmand" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
         <rdfs:label xml:lang="fr-FR">Café ou thé gourmand</rdfs:label>
@@ -109,8 +109,9 @@
         <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
             10
         </carte:prixDeVenteTtc>
+        <recette:a-la-specificite rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/fondant-au-chocolat" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
 <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
         <rdfs:label xml:lang="fr-FR">Fondant au chocolat, meringue et glace Vanille</rdfs:label>
@@ -118,8 +119,9 @@
         <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
             11
         </carte:prixDeVenteTtc>
+        <recette:a-la-specificite rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sabayon" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sabayon" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
         <rdfs:label xml:lang="fr-FR">Fruits frais de saison, sabayon au Champagne gratiné</rdfs:label>
@@ -127,8 +129,9 @@
         <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
             10
         </carte:prixDeVenteTtc>
+        <recette:a-la-specificite rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan"/>
     </rdf:Description>
-    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/tarte-tatin" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte">
+    <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/tarte-tatin" xmlns:carte="http://www.univ-rouen.fr/ontologies/restaurant/carte" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/famille-de-plat/desserts"/>
        <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
        <rdfs:label xml:lang="fr-FR">Tarte tatin, crème fraîche de Normandie’</rdfs:label>
@@ -136,6 +139,7 @@
        <carte:prixDeVenteTtc rdf:datatype="http://www.w3.org/2001/XMLSchema#int">
            10
        </carte:prixDeVenteTtc>
+       <recette:a-la-specificite rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan"/>
    </rdf:Description>
     <rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu/menu-du-jour">
         <rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/menu"/>
@@ -156,9 +160,10 @@
 	</rdf:Description>
 	</menu:contient-la-recette>
 	<menu:contient-la-recette>
-	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sorbet-citron">
+	<rdf:Description rdf:about="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts/sorbet-citron" xmlns:recette="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette">
 		<rdf:type rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/carte/recette/desserts"/>
 	    <rdfs:label xml:lang="fr-FR">Sorbet Citron</rdfs:label>
+	    <recette:a-la-specificite rdf:resource="http://www.univ-rouen.fr/ontologies/restaurant/specificite/vegan"/>
 	</rdf:Description>
 	</menu:contient-la-recette>
     </rdf:Description>
